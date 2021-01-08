@@ -22,7 +22,7 @@ phases:
       - echo Pushing the Docker images...
       - docker push "$IMAGE_URI"
       - echo Writing image definitions file...
-      - printf '[{"name":"%s","imageUri":"%s"}]' "$IMAGE_URI" > imagedefinitions.json
+      - printf '[{"name":"aws-hello-world-rest-api","imageUri":"%s"}]' "$IMAGE_URI" > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
     files: imagedefinitions.json
